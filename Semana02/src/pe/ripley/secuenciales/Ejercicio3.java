@@ -1,5 +1,6 @@
 package pe.ripley.secuenciales;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejercicio3 {
@@ -12,7 +13,7 @@ public class Ejercicio3 {
     }
     public static void main(String[] args) {
         double a, b, c;
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         System.out.println("Ingrese el lado A:");
         a = sc.nextDouble();
         System.out.println("Ingrese el lado B:");
@@ -22,6 +23,7 @@ public class Ejercicio3 {
         double area;
         area = calcularArea(a, b, c);
         System.out.println("Resultado:" + area);
+        System.out.printf("Resultado: %.2f", area);
 
     }
 }
