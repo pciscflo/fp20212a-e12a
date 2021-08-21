@@ -3,7 +3,7 @@ package com.upc.selectivas;
 public class Ejercicio1 {
     public static void main(String[] args) {
         int suma;
-        suma = sumar(3,5);
+        suma = sumar(7,9);
         System.out.println(suma);
     }
     public static int sumar(int a, int b){
