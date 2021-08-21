@@ -12,7 +12,7 @@ public class Ejercicio4 {
         System.out.println("Ingrese Examen Oral:");
         examenOral = sc.nextInt();
         System.out.println(obtenerNivel(examenEscrito, examenOral));
-        System.out.println(obtenerPrecio(examenEscrito, examenOral));
+        System.out.println(obtenerPrecio(examenEscrito, examenOral));//
 
     }
     public static String obtenerNivel(int examenEscrito, int examenOral){
