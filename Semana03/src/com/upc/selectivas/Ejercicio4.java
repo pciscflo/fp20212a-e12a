@@ -12,6 +12,7 @@ public class Ejercicio4 {
         System.out.println("Ingrese Examen Oral:");
         examenOral = sc.nextInt();
         System.out.println(obtenerNivel(examenEscrito, examenOral));
+        System.out.println(obtenerPrecio(examenEscrito, examenOral));
 
     }
     public static String obtenerNivel(int examenEscrito, int examenOral){
@@ -25,7 +26,7 @@ public class Ejercicio4 {
         }
         return nivel;
     }
-    public static double obtenerPrecio(int examenOral, int examenEscrito){
+    public static double obtenerPrecio(int examenEscrito, int examenOral){
         String nivel;
         double precio;
         nivel = obtenerNivel(examenOral, examenEscrito);
