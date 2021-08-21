@@ -8,9 +8,13 @@ public class Ejercicio5 {
     public static void main(String[] args) {
        int cantidadTalleres, cantidadReferidos;
         Scanner sc = new Scanner(System.in);
-        cantidadTalleres = 4;
-        cantidadReferidos = 10;
+        System.out.println("Ingrese cantidad de talleres:");
+        cantidadTalleres = sc.nextInt();
+        System.out.println("Ingrese cantidad de referidos:");
+        cantidadReferidos = sc.nextInt();
         System.out.println(calcularDescuentoNroTalleres(cantidadTalleres));
+        System.out.println(calcularDescuentoReferidos(cantidadReferidos,cantidadTalleres));
+        System.out.println(calculareDescuentoTotal(cantidadTalleres, cantidadReferidos));
 
     }
 
@@ -43,7 +47,7 @@ public class Ejercicio5 {
         return descuento;
     }
     public static double calculareDescuentoTotal(int cantidaTalleres, int cantidadReferidos){
-         double descuento = 0;
+         double descuento;
          descuento = calcularDescuentoNroTalleres(cantidaTalleres) +
                  calcularDescuentoReferidos(cantidadReferidos, cantidaTalleres);
          return  descuento;
