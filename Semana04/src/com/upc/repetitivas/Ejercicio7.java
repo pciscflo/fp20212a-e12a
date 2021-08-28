@@ -16,6 +16,36 @@ public class Ejercicio7 {
    b.	Calcular el porcentaje de aumento después de N años.
  */
     public static void main(String[] args) {
-
+      //entrada n numero de años, sueldo, cargo (g, e)
+      // salida : sueldo final al cabo de n años
+        int n=10;
+        double sueldo=500;
+        String cargo="g";
+        double sueldofinal;
+        sueldofinal = calcularSueldoFinalTrabajador(n, sueldo,cargo);
+        System.out.println("Sueldo Final:" + sueldofinal);
     }
+    public static double calcularSueldoFinalTrabajador(int n, double sueldo, String cargo){
+        double porcentajeAumento=0;//variable local, temporal al metodo
+       for(int i=1; i<=n; i++){ //for 1,2,....,n
+           if(cargo.equals("g")){
+               if(i % 4 == 0){
+                   porcentajeAumento = 0.18;
+               }else{
+                   porcentajeAumento =0.14;
+               }
+           }
+           if(cargo.equals("e")){
+               if(i % 4 == 0){
+                   porcentajeAumento = 0.12;
+               }else{
+                   porcentajeAumento =0.08;
+               }
+           }
+           sueldo = sueldo + porcentajeAumento*sueldo;
+       } //fin del for
+       return sueldo;
+    }
+
+
 }
