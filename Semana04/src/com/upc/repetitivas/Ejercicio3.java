@@ -2,7 +2,7 @@ package com.upc.repetitivas;
 
 import java.util.Scanner;
 
-public class Ejercicios3 {
+public class Ejercicio3 {
     public static void main(String[] args) {
         // suma = 1 + 4 + 7 +........n términos
         int n, contadorTerminos=1, suma=0;
