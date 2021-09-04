@@ -9,14 +9,15 @@ public class Ejercicio3 {
         }
         System.out.println("-------------------------");
         //Imprimir un listado de paquetes que pesen menos de 30 kilos
-        String[] paq = obtenerPaquetesMenos30Kilos(pesos, paquetes);
+        String[] paq = obtenerPaquetesMenos30Kilos(pesos, paquetes);//llamamos al método
         for(int i=0; i< paq.length;i++){
             System.out.println(paq[i]);
         }
     }
+    //metodo que "retorna un arreglo" que contiene los nombres de los paquetes que pesan menos de 30
     public static String[] obtenerPaquetesMenos30Kilos(double[] pesos, String[] paquetes){
         String[] temporalPaquetes = new String[pesos.length];//datos son nulos
-        int j=0;
+        int j=0;//contador de paquetes que pesan menos de 30 kilos, sirve para el temporal
         for(int i=0; i<pesos.length;i++){
             if(pesos[i]<30){
                 temporalPaquetes[j] = paquetes[i];
