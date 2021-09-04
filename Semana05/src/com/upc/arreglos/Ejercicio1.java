@@ -27,8 +27,8 @@ public class Ejercicio1 {
         int maximo = 0;
         for (int i = 0; i < notas.length; i++) {
             if (notas[i] > maximo) {
-                maximo = notas[i];
-                ap = apellidos[i];
+                maximo = notas[i];//19,20
+                ap = apellidos[i];//Torres, Lopez
             }
         }
         return ap;//maximo
