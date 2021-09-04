@@ -16,6 +16,39 @@ public class Ejercicio1 {
         }
         return suma;
     }
+
+    public static int sumarDigitos34(int clave){
+        int digito, suma = 0, posicion=0;
+        while(clave>0){
+            posicion++;
+            if(posicion == 3 || posicion==4){
+                digito = clave % 10;
+                suma+=digito;
+            }
+            clave = clave / 10;
+        }
+        return suma;
+    }
+
+    public static int cantidadDigitos(int clave){
+        int digito, contadorDigitos = 0;
+        while(clave>0){
+            contadorDigitos++;
+            clave = clave / 10;
+        }
+        return contadorDigitos;
+    }
+
+    public static boolean validarClave(int clave){
+        int digitos = cantidadDigitos(clave);
+        int suma = sumarDigitos34(clave);
+        if (digitos>=4 && suma % 2 ==0){
+            return true;
+        }
+        return false;
+    }
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int numero;
