@@ -6,6 +6,7 @@ public class Ejercicio4 {
         "AR124511", "PE562405", "PE562405", "BR452102", "AR455210"};
         System.out.println("Cantidad de Productos:" + obtenerCantidadProductos("PE",codigos));
         System.out.println("Maximo Correlativo dado pais:" + obtenerMayorCorrelativo("BR", codigos));
+        System.out.println("Costo de almacenaje dado pais:" + obtenerCostoAlmacenaje("PE",codigos));
     }
     public static int obtenerCantidadProductos(String nacionalidad,String[] codigos){
         int contador=0;
@@ -24,5 +25,14 @@ public class Ejercicio4 {
             }
         }
         return maximo;
+    }
+    public static int obtenerCostoAlmacenaje(String nacionalidad, String[] codigos){
+        int suma = 0;
+        for (int i=0; i< codigos.length;i++){
+            if (codigos[i].substring(0,2).equals(nacionalidad)){
+                suma += Integer.parseInt(codigos[i].substring(6,8));
+            }
+        }
+        return suma;
     }
 }
