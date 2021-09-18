@@ -22,7 +22,7 @@ public class Ejercicio1 {
                              123,123,431,124,153,231,
                              321,145,651,138,765,132,
                              333,111,222,444,555,123,
-                            451,453,431,467,454,344};
+                             451,453,431,467,454,344};
 
     public int obtenerPuntajeCandidato(String codigo){
         int suma = 0;
